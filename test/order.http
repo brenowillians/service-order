@@ -1,0 +1,78 @@
+
+GET  https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/8512e144-94e3-41ab-98ee-6076a03bae2d HTTP/1.1
+
+###
+POST  http://localhost:7300/order/ HTTP/1.1
+content-type: application/json
+
+{
+    "idOrder":1,
+    "orderDate": "2024-09-25",
+    "idUserSite":1,
+    "details": "detalhes do pedido",
+    "createdId":1
+    
+    
+}
+
+###
+GET  http://localhost:7300/order/ HTTP/1.1
+
+###
+GET  http://localhost:7300/order/2 HTTP/1.1
+
+###
+PATCH  http://localhost:7300/order/2 HTTP/1.1
+content-type: application/json
+
+{
+    "password": "tyuvhjbu"
+    
+}
+
+###
+DELETE  http://localhost:7300/order/4 HTTP/1.1
+
+
+###
+POST  http://localhost:7300/order/list HTTP/1.1
+content-type: application/json
+
+{
+    "active": false,
+    "items": 10,
+    "page": 1,
+    "order": { "createdDate": "DESC"}
+}
+
+
+###
+POST  http://localhost:7300/order/make-order HTTP/1.1
+content-type: application/json
+
+{
+    "idUserSite": 1,
+    "details": "terceiro teste",
+    "creditCardNumber": "4324654394365437",
+    "expirationDate": "02/2028",
+    "cvc": "171",
+    "creditCardOwner": "JOSELITO DA SILVA",
+    "orderItems": [
+        { 
+            "idOrder": 0,
+            "idProduct": 1,
+            "quantity": 3,
+            "productName": "Tenis do Paraguai",
+            "price": 80,
+            "createdId": 1
+        },
+        { 
+            "idOrder": 0,
+            "idProduct": 2,
+            "quantity": 2,
+            "productName": "Relógio Falsificado",
+            "price": 30,
+            "createdId": 1
+        }
+    ]
+}

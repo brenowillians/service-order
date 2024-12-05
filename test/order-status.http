@@ -1,0 +1,27 @@
+
+###
+POST  http://localhost:7300/order-status/ HTTP/1.1
+content-type: application/json
+
+{
+    "order-statusDate": "25/09"
+    
+}
+
+###
+GET  http://localhost:7300/order-status/ HTTP/1.1
+
+###
+GET  http://localhost:7300/order-status/2 HTTP/1.1
+
+###
+PATCH  http://localhost:7300/order-status/2 HTTP/1.1
+content-type: application/json
+
+{
+    "password": "tyuvhjbu"
+    
+}
+
+###
+DELETE  http://localhost:7300/order-status/4 HTTP/1.1

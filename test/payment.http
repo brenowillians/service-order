@@ -1,0 +1,27 @@
+
+###
+POST  http://localhost:7300/payment/ HTTP/1.1
+content-type: application/json
+
+{
+    "paymentDate": "25/09"
+    
+}
+
+###
+GET  http://localhost:7300/payment/ HTTP/1.1
+
+###
+GET  http://localhost:7300/payment/2 HTTP/1.1
+
+###
+PATCH  http://localhost:7300/payment/2 HTTP/1.1
+content-type: application/json
+
+{
+    "password": "tyuvhjbu"
+    
+}
+
+###
+DELETE  http://localhost:7300/payment/4 HTTP/1.1
